@@ -1,0 +1,14 @@
+Actually background images isn't scroll. Trick is simple.
+Each section’s container div has fixed background image with background-size:cover property like this.
+#home-section {
+    background-image: 'test.png';
+    background-position : fixed;
+    background-size : cover;
+}
+This creates illusion when page scrolling.
+permalinkparent
+[–]StartSpring 2 points 20 days ago 
+It should be
+background-attachment: fixed;
+and not:
+background-position: fixed;
